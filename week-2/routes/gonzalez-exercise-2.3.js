@@ -19,7 +19,7 @@ app.get("/contact", function(req, res){
 app.use(function(req, res){
     res.statsCode = 404;
     res.end("404!\n");
-)};
+});
 
 http.createServer(app).listen(3000, function() {
     console.log("Application started on port %s", 3000);
