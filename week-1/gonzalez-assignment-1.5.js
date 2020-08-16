@@ -10,9 +10,9 @@
 
 const header = require('../gonzalez-header');
 console.log(header.display("Juvenal", "Gonzalez", "Exercise 1.5"));
-
+//inputs http method into a variable so that its properties may be implemented
 var http = require("http");
-
+//function that responds with a message once the localhost is called
 function processRequest(req, res) {
 
 var body = "Hey I'm in your browser!!";
@@ -30,7 +30,6 @@ var body = "Hey I'm in your browser!!";
     res.end(body);
 
 }
-
+//starts the server that is constantly running and processes commands
 var s = http.createServer(processRequest);
-
 s.listen(8080);
