@@ -8,7 +8,7 @@
 ;===========================================
 */
 
-const header = require('../gonzalez-header');
+const header = require('/gonzalez-header');
 console.log(header.display("Juvenal", "Gonzalez", "Exercise 2.3"));
 
 
