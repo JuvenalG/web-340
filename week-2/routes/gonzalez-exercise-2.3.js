@@ -1,3 +1,17 @@
+/*
+============================================
+; Title:  Exercise 2.3
+; Author: Richard Krasso
+; Date:   August 10 2020
+; Modified By: Juvenal Gonzalez
+; Description: Create a web server that sends a message to the browser
+;===========================================
+*/
+
+const header = require('../gonzalez-header');
+console.log(header.display("Juvenal", "Gonzalez", "Exercise 2.3"));
+
+
 var express = require('express');
 var http = require('http');
 
