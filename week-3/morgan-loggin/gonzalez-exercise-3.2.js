@@ -7,7 +7,7 @@ var app = express();
 //tell js where to find views directory
 app.set('views', path.resolve(__dirname, 'views'));
 //set ejs view engine
-app.set('viw engine', 'ejs');
+app.set('view engine', 'ejs');
 //logger set up
 app.use(logger('dev'));
 //get request that listens to request and renders message as output
