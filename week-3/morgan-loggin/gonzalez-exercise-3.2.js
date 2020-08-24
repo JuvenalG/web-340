@@ -1,11 +1,11 @@
-var express = requie('express');
+var express = require('express');
 var http = require('http');
 var path = require('path');
 var logger = require('morgan');
 
 var app = express();
 //tell js where to find views directory
-app.set('views', path.resolve(_dirname, 'views'));
+app.set('views', path.resolve(__dirname, 'views'));
 //set ejs view engine
 app.set('viw engine', 'ejs');
 //logger set up
