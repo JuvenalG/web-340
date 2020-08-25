@@ -25,7 +25,9 @@ app.set('views', path.resolve(__dirname, 'views'));
 app.set('view engine', 'ejs');
 //logger set up
 app.use(logger('short'));
-
+//listens to http requests and displays the given message 
+//onto the message tag that corresponds with the file path
+//after the domain
 app.get("/", function(request,response){
     response.render("index", {
         message: "Home Page"
@@ -49,7 +51,7 @@ app.get("/products", function(request,response){
         message: "Products Page"
     });
 });
-
+//creates server and displays verification message
 http.createServer(app).listen(8080, function(){
     console.log("Application started on port 8080");
 });
