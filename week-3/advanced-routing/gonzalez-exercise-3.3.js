@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 //logger set up
 app.use(logger('dev'));
 
-app.get("/:productId", function(req,res){
+app.get("/:productId", function(req, res){
     var productId = parseInt(req.params.productId, 10);
 
     res.render("index", {
