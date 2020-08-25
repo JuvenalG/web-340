@@ -1,8 +1,24 @@
+/*
+============================================
+; Title:  Exercise 3.3
+; Author: Richard Krasso
+; Date:   August 24 2020
+; Modified By: Juvenal Gonzalez
+; Description: Create a web server that logs request 
+; which outputs a track recored of traffic to the url
+;===========================================
+*/
+
+const header = require('/users/mrjuv/bu-webdev/web-340/gonzalez-header');
+console.log(header.display("Juvenal", "Gonzalez", "Exercise 3.2"));
+
+//includes these modules in the application
 var express = require('express');
 var http = require('http');
 var path = require('path');
+//includes logger library that outputs traffic to url and lists requests
 var logger = require('morgan');
-
+//applies the express library to the app variable
 var app = express();
 //tell js where to find views directory
 app.set('views', path.resolve(__dirname, 'views'));
