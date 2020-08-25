@@ -15,7 +15,7 @@ app.get("/:productId", function(req, res){
     var productId = parseInt(req.params.productId, 10);
 
     res.render("index", {
-        productId: prdouctId
+        productId: productId
     });
 });
 
