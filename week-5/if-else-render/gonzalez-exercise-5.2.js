@@ -5,12 +5,12 @@
 ; Date:   September 8 2020
 ; Modified By: Juvenal Gonzalez
 ; Description: Create a web server that passes an array and
-; is outputted an using EJS for loop 
+; is outputted using EJS for loop 
 ;===========================================
 */
 
 const header = require('/users/mrjuv/bu-webdev/web-340/gonzalez-header');
-console.log(header.display("Juvenal", "Gonzalez", "Assignment 3.4"));
+console.log(header.display("Juvenal", "Gonzalez", "Assignment 5.2"));
 
 //require statements
 var express = require("express");
