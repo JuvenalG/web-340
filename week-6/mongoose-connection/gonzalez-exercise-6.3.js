@@ -15,7 +15,7 @@ var express = require("express");
 var http = require("http");
 var logger = require("morgan");
 var mongoose = require("mongoose");
-//mongoDB connection with password in url link also must encode special characters to connect
+//mongoDB connection with password in url link also must encode special characters in password to connect
 var mongoDB = "mongodb://juvGonz:admin@buwebdev-cluster-1-shard-00-00.saboe.mongodb.net:27017,buwebdev-cluster-1-shard-00-01.saboe.mongodb.net:27017,buwebdev-cluster-1-shard-00-02.saboe.mongodb.net:27017/<dbname>?ssl=true&replicaSet=atlas-8fcbaa-shard-0&authSource=admin&retryWrites=true&w=majority";
 mongoose.connect(mongoDB, {
     useMongoClient: true
