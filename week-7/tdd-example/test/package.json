@@ -1,0 +1,9 @@
+{
+    "name": "tdd-example",
+    "author": "Professor Krasso",
+    "private": true,
+    "dependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^8.1.3"
+    }
+}
