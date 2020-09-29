@@ -1,0 +1,29 @@
+<%- include("header") %>
+
+<%- include("navbar") %>
+<!--If statement that displays when a value is present-->
+<% if (employee.length) { %>
+    <h2  style="color: #19E237;">‐‐ Employee Listings ‐‐</h2><br />
+    <table class="table table‐hover"  style="color: #19E237;">
+        <thead class="thead‐dark">
+        <tr>
+            <th>First Name</th><!--Table Headers-->
+            <th>Last Name</th>
+        </tr>
+        </thead>
+        <tbody> <!--For Each function displays every value of employee object-->
+        <% employee.forEach(function (entry) { %>
+        <tr> 
+            <td><%= entry.firstName %></td>
+            <td><%= entry.lastName %></td>
+        </tr>
+        </tbody>
+        <% }) %>
+    </table> <!--Else statement allows user to add new employee if none are present-->
+    <% } else { %>
+    No entries! <a href="/new">Add one!</a>
+    <% } %>
+
+<%- include("footer") %>
+
+<%- include("scripts") %>
