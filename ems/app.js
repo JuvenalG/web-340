@@ -77,6 +77,43 @@ app.get("/list", function(request, response) {
    });
 });
 
+
+app.get("/view/:queryName", function (request, response) { 
+
+
+   var queryName = request.params.queryName;
+
+   Employee.find({'firstName': queryName}, function(error, employee) {
+      
+
+       if (error) throw error;
+
+       console.log(employee);
+
+       if (employee.length > 0) {
+
+           response.render("view", {
+
+               title: "Employee Record",
+
+               employees: employee
+
+           })
+
+       }
+
+       else {
+
+           response.redirect("/list")
+
+       }
+
+   });
+
+});
+
+
+
 app.post("/process", function(request, response) {
    //empty employee object
    var employee = new Employee({
