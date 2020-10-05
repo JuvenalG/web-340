@@ -31,7 +31,7 @@ db.once("open", function() {
 var app = express();
  app.set("views", path.resolve(__dirname,"views"));
  app.set("view engine", "ejs");
- app.set("port", process.env.PORT || 8080);
+ app.set('port', process.env.PORT || 3000);
  app.use(logger("short"));
 //helmet use statement
 app.use(helmet.xssFilter());
@@ -85,32 +85,18 @@ app.get("/view/:queryName", function (request, response) {
    var queryName = request.params.queryName;
 
    Employee.find({'firstName': queryName}, function(error, employee) {
-      
-
        if (error) throw error;
-
-       console.log(employee);
-
+           console.log(employee);
        if (employee.length > 0) {
-
            response.render("view", {
-
                title: "Employee Record",
-
-               employees: employee
-
+               employees: employee //employees takes input from value defined in views
            })
-
        }
-
        else {
-
            response.redirect("/list")
-
        }
-
    });
-
 });
 
 
@@ -135,7 +121,6 @@ app.post("/process", function(request, response) {
 
 
 
-
-http.createServer(app).listen(app.get(“port”), function() { 
-   console.log(“Application started on port “ + app.get(“port”)) 
+http.createServer(app).listen(app.get('port'), function() {
+   console.log('Application started on port ' + app.get('port'));
 });
