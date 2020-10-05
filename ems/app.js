@@ -31,6 +31,7 @@ db.once("open", function() {
 var app = express();
  app.set("views", path.resolve(__dirname,"views"));
  app.set("view engine", "ejs");
+ app.set("port", process.env.PORT || 8080);
  app.use(logger("short"));
 //helmet use statement
 app.use(helmet.xssFilter());
@@ -132,7 +133,9 @@ app.post("/process", function(request, response) {
 
 });
 
-app.set(“port”, process.env.PORT || 8080);
 
 
-http.createServer(app).listen(app.get(“port”), function() { console.log(“Application started on port “ + app.get(“port”)) });
+
+http.createServer(app).listen(app.get(“port”), function() { 
+   console.log(“Application started on port “ + app.get(“port”)) 
+});

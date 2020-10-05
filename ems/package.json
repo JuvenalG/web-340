@@ -13,8 +13,10 @@
         "jquery": "^3.5.1",
         "mongoose": "^5.10.6",
         "morgan": "^1.10.0"
-    }
+    },
 
-    “scripts”: { “start”: “node app.js” }
+    "scripts": {"start": "node app.js"},
+
+    "engines": {"node": "12.17.0"}
 
 }
